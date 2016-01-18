@@ -1,7 +1,9 @@
 var entry;
+var lowered;
 var converted;
 
 var convertIt = function(entry) {
-  converted = entry.toLowerCase();
+  lowered = entry.toLowerCase();
+  converted = lowered.replace(/[^a-z0-9\s]/gi, '');
   return converted;
 }

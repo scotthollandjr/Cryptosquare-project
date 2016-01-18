@@ -2,6 +2,10 @@ describe('convertIt', function() {
   it("puts string to all lower case", function() {
     expect(convertIt("HELLO")).to.equal("hello");
   });
+
+  it("removes symbols from string", function() {
+    expect(convertIt("Hello!")).to.equal("hello");
+  });
 });
 
 // string with capital letters || HeLlO || hello
