@@ -6,6 +6,14 @@ describe('convertIt', function() {
   it("removes symbols from string", function() {
     expect(convertIt("Hello!")).to.equal("hello");
   });
+
+  it("removes numbers from string", function() {
+    expect(convertIt("h3ll0")).to.equal("hll");
+  });
+
+  it("removes spaces from string", function() {
+    expect(convertIt("Hello there")).to.equal("hellothere");
+  });
 });
 
 // string with capital letters || HeLlO || hello
