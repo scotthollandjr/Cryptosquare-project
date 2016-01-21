@@ -1,16 +1,15 @@
 var entry;
 var lowered;
-var unSymbol;
-var deNumber;
 var converted;
+
 
 var convertIt = function(entry) {
   lowered = entry.toLowerCase();
-  unSymbol = lowered.replace(/[^a-z0-9\s]/g, '');
-  deNumber = unSymbol.replace(/\d+/g, '');
-  converted = deNumber.replace(/\s/g, '');
+  converted = (lowered.replace(/[^a-z]/ig, ''));
   return converted;
 }
+
+// converted.length %% (this many columns)
 
 $(document).ready(function() {
   $("form#messageForm").submit(function(event) {
